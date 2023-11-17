@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import '../styles/styles.css';
+
+const a = 5;
+---
+
+<Layout title='Welcome to Astro.'>
+  <main>
+    <h1 class='text-center text-8xl text-purple-400'>Hola mundo</h1>
+    <p class='text-center text-neutral-100'>El valor de a es: {a}</p>
+    <form class='text-center'>
+      <input type='text' />
+      <button type='submit' class='bg-purple-400'>send</button>
+    </form>
+  </main>
+</Layout>
+
+<script>
+  console.log('Hola mundo');
+
+  // select the form element
+  const form = document.querySelector('form');
+
+  // add an event listener to the form
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    //console log the input value
+    console.log(form.querySelector('input').value);
+    // reset the input value
+    form.querySelector('input').value = '';
+  });
+</script>
