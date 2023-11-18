@@ -1,0 +1,17 @@
+---
+type Props = {
+  id: number;
+  title: string;
+  completed: boolean;
+};
+
+const { id, title, completed } = Astro.props;
+---
+
+<div class='flex gap-4 border-b-2 bg-slate-900 p-4'>
+  <input class='checkbox' type='checkbox' checked={completed} />
+
+  <p>{title}</p>
+
+  <slot />
+</div>

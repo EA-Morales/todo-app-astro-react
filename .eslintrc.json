@@ -2,6 +2,11 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   // ...
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
   "extends": [
     "eslint:recommended", // set of rules recommended by ESLint
     "plugin:astro/recommended", // set of rules recommended by Astro
@@ -9,9 +14,6 @@
     "plugin:tailwindcss/recommended",
     "plugin:prettier/recommended"
   ],
-  /* "plugins": [
-    "prettier"
-  ], */
   "overrides": [
     {
       // Define the configuration for `.astro` file.
