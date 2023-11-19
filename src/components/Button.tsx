@@ -1,8 +1,6 @@
-import React from 'react';
+import type React from 'react';
 
-console.log('Button');
-
-const Button: React.FC = () => {
+const Button = (): React.JSX.Element => {
   return <button onClick={() => console.log('Click')}>Click</button>;
 };
 
