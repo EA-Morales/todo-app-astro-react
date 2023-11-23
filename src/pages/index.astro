@@ -4,9 +4,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Todo app'>
-  <main>
-    <h1 class='text-center text-3xl text-purple-400'>T O D O</h1>
+  <main class='container mx-auto flex flex-col justify-center px-6'>
+    <h1 class='mb-12 text-center text-3xl text-purple-400'>T O D O</h1>
 
-    <WrapperReactTodos client:load />
+    <div class=''>
+      <WrapperReactTodos client:load />
+    </div>
   </main>
 </Layout>

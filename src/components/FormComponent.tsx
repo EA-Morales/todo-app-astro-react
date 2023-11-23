@@ -15,13 +15,18 @@ const FormComponent = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} action=''>
+      <form
+        className='flex justify-center gap-2'
+        onSubmit={handleSubmit}
+        action=''
+      >
         <input
+          className='input input-bordered input-xs'
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type='text'
         />
-        <button>Submit</button>
+        <button className='btn btn-xs'>Submit</button>
       </form>
     </>
   );
