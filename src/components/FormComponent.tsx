@@ -16,12 +16,12 @@ const FormComponent = () => {
   return (
     <>
       <form
-        className='flex justify-center gap-2'
+        className='mb-9 flex justify-center gap-2'
         onSubmit={handleSubmit}
         action=''
       >
         <input
-          className='input input-bordered input-xs'
+          className='input input-bordered input-xs w-full max-w-xs'
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type='text'

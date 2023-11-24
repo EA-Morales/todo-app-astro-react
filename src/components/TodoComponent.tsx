@@ -10,17 +10,20 @@ const TodoComponent = ({ id, title, completed }: Todo) => {
   const { toggleCompleted, removeTodo } = useTodosHook();
 
   return (
-    <div className='flex gap-4' key={id}>
+    <div
+      className='flex items-center justify-between gap-4 rounded-lg bg-slate-800 p-4'
+      key={id}
+    >
       {completed ? (
-        <button onClick={() => toggleCompleted(id)} className='text-green-500'>
+        <button onClick={() => toggleCompleted(id)} className=''>
           ✅
         </button>
       ) : (
-        <button onClick={() => toggleCompleted(id)} className='text-red-500'>
+        <button onClick={() => toggleCompleted(id)} className=''>
           ❌
         </button>
       )}
-      <div>{title}</div>
+      <div className='break-all'>{title}</div>
       <button onClick={() => removeTodo(id)} className='btn btn-xs'>
         delete
       </button>

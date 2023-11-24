@@ -6,7 +6,7 @@ const TodosComponent = () => {
   const Todos = useStore($Todos);
 
   return (
-    <div>
+    <div className='flex flex-col gap-4'>
       {Todos.map((todo) => (
         <TodoComponent
           key={todo.id}
