@@ -8,6 +8,11 @@ const FormComponent = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!input || input.trim().length === 0) {
+      alert('Input cannot be empty');
+      return;
+    }
+
     addTodo({ id: Date.now(), title: input, completed: false });
 
     setInput('');

@@ -23,7 +23,13 @@ const TodoComponent = ({ id, title, completed }: Todo) => {
           ❌
         </button>
       )}
-      <div className='break-all'>{title}</div>
+      <div
+        className={`break-all ${
+          completed ? 'text-slate-600 line-through' : ''
+        }`}
+      >
+        {title}
+      </div>
       <button onClick={() => removeTodo(id)} className='btn btn-xs'>
         delete
       </button>
