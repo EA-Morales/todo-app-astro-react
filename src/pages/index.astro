@@ -1,14 +1,13 @@
 ---
-import { WrapperReactTodos } from '../components/WrapperReactTodos';
+import Input from '../components/ui/Input.astro';
+import Label from '../components/ui/Label.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Todo app'>
-  <main class='mx-auto mb-4 flex min-h-screen flex-col px-6'>
+  <main class='mx-auto mb-4 flex h-full min-h-screen flex-col px-6'>
     <h1 class='mb-12 text-center text-3xl text-purple-400'>T O D O</h1>
 
-    <div class=''>
-      <WrapperReactTodos client:load />
-    </div>
+    <Label for={'inputName'}>Nombre</Label>
   </main>
 </Layout>

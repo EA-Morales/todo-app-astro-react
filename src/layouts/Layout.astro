@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='es'>
+<html data-theme='' lang='es'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class=''>
+  <body class='h-full bg-white'>
     <slot />
   </body>
 </html>
